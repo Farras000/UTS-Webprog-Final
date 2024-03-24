@@ -35,11 +35,11 @@
                         required />
                     <select id="input" name="gender" class="form-select" aria-label="Default select example">
                         <option selected>Gender</option>
-                        <option value="1">Male</option>
-                        <option value="2">Female</option>
-                        <option value="3">Emaile</option>
-                        <option value="4">Mechanic</option>
-                        <option value="5">Croissant</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Emaile">Emaile</option>
+                        <option value="Mechanic">Mechanic</option>
+                        <option value="Croissant">Croissant</option>
                     </select>
                     <input id="input" type="date" name="birthdate" required />
                     <p style="color: var(--4) ">Bukti Pembayaran</p>
