@@ -1,8 +1,6 @@
 <?php
-// Mulai sesi
-session_start();
 
-// Sisipkan file koneksi database Anda di sini
+session_start();
 include 'koneksi.php';
 
 
@@ -11,44 +9,34 @@ if (!isset ($_SESSION['ulogin'])) {
     exit();
 }
 
-// Ambil data pengguna dari database
 $user_id = $_SESSION['ulogin'];
 $sql = "SELECT * FROM users WHERE ID_User = '$user_id'";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
 
-// Tangani penekanan tombol "Update Profile"
+
 if (isset ($_POST['update_profile'])) {
-    // Ambil nilai dari formulir
     $fullName = $_POST['fullName'];
     $email = $_POST['email'];
-
-    // Perbarui data pengguna di database
     $update_sql = "UPDATE users SET FullName='$fullName', Email='$email' WHERE ID_User='$user_id'";
     $update_result = mysqli_query($conn, $update_sql);
     if ($update_result) {
         echo "<script>alert('Profile updated successfully!');</script>";
-        // Muat ulang halaman setelah pembaruan profil berhasil
         echo "<script>window.location.href='profile.php';</script>";
     } else {
         echo "<script>alert('Failed to update profile. Please try again.');</script>";
     }
 }
-
-// Tangani penekanan tombol "Change Password"
 if (isset ($_POST['change_password'])) {
-    // Ambil nilai dari formulir
     $oldPassword = md5($_POST['oldPassword']);
     $newPassword = md5($_POST['newPassword']);
 
-    // Periksa apakah kata sandi lama cocok dengan yang ada di database
     if ($oldPassword === $row['Password']) {
-        // Perbarui kata sandi pengguna di database
+
         $update_password_sql = "UPDATE users SET Password='$newPassword' WHERE ID_User='$user_id'";
         $update_password_result = mysqli_query($conn, $update_password_sql);
         if ($update_password_result) {
             echo "<script>alert('Password changed successfully!');</script>";
-            // Muat ulang halaman setelah pergantian kata sandi berhasil
             echo "<script>window.location.href='profile.php';</script>";
         } else {
             echo "<script>alert('Failed to change password. Please try again.');</script>";
