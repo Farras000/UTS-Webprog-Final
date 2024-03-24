@@ -1,0 +1,59 @@
+{
+    "packages": [
+        {
+            "name": "sadegh-pm/recapcha",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SadeghPM/reCAPCHA.git",
+                "reference": "77f5c7e4355286d5d8943924a094925179061ef3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SadeghPM/reCAPCHA/zipball/77f5c7e4355286d5d8943924a094925179061ef3",
+                "reference": "77f5c7e4355286d5d8943924a094925179061ef3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0"
+            },
+            "time": "2017-02-25T22:10:48+00:00",
+            "default-branch": true,
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "SadeghPM\\Recapcha\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sadegh Pourmohamadi",
+                    "email": "SadeghPM@gmail.com",
+                    "homepage": "http://www.4xmen.ir/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PSR-7 Google reCAPCHA Middleware",
+            "homepage": "https://github.com/SadeghPM/reCAPCHA",
+            "keywords": [
+                "middleware",
+                "psr-7",
+                "recapcha",
+                "slimframework"
+            ],
+            "support": {
+                "issues": "https://github.com/SadeghPM/reCAPCHA/issues",
+                "source": "https://github.com/SadeghPM/reCAPCHA/tree/master"
+            },
+            "install-path": "../sadegh-pm/recapcha"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}

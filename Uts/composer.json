@@ -1,0 +1,19 @@
+{
+    "name": "dell/uts",
+    "description": "uts",
+    "autoload": {
+        "psr-4": {
+            "Dell\\Uts\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Farras000",
+            "email": "149809452+Farras000@users.noreply.github.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "sadegh-pm/recapcha": "dev-master"
+    }
+}
